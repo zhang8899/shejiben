@@ -1,0 +1,86 @@
+<template>
+    <a  @click.stop="" class="info clear">
+        <img :src="items.src" alt="">
+        <span class="name">
+            <i>{{items.num}}</i>
+            <p class="ect">{{items.name}}</p>
+        </span>
+        <div class="rank">{{items.rank}}</div>
+        <div class="space">
+            <div class="column_name">擅长空间</div>
+            {{items.space}}
+        </div>
+    </a>
+</template>
+<script>
+export default {
+    props:["items"]
+}
+</script>
+<style scoped>
+/*设计师专访*/
+.sjszf-list{
+	margin-top: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.sjszf-list h1{
+	font-size: 16px;
+    color: #000;
+    padding: 13px 0 15px 10px;
+    font-weight: 400;
+}
+.sjszf-list .info {
+    display: block;
+    padding-right: 10px;
+    margin-top: 10px;
+    border-bottom: 1px #f1f1f1 solid;
+}
+.sjszf-list img{
+	width: 110px;
+    height: 132px;
+    float: left;
+    margin: 0 10px 10px;
+}
+.sjszf-list .name {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+}
+.sjszf-list .name i {
+    float: left;
+    height: 16px;
+    padding: 0 5px;
+    margin: 1px 5px 0 0;
+   
+    background: #dd4f50;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+}
+.sjszf-list .name p {
+    float: left;
+    max-width: 108px;
+}
+.sjszf-list .rank {
+    padding: 0 0 10px;
+    border-bottom: 1px #f1f1f1 dotted;
+}
+.sjszf-list .space {
+	height: auto;
+    margin: 5px 10px 5px 130px;
+    font-size: 12px;
+    color: #999;
+    line-height: 16px;
+}
+
+.sjszf-list .column_name {
+    padding: 15px 0 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+</style>
